@@ -1,0 +1,20 @@
+#Display all data using a SELECT statement
+SELECT item_name, price
+FROM superstore
+ORDER BY price;
+
+#Show a statistic about the price
+SELECT AVG(price), MAX(price), MIN(price)
+FROM superstore;
+
+#Show a statistic about the price where the category is Kitchen Supplies
+SELECT AVG(price)
+FROM superstore
+WHERE category = 'Kitchen Supplies'
+;
+
+#Show a statistic from a specific category
+SELECT COUNT(item_id) Number, category
+FROM superstore
+WHERE category = 'Furnishings'
+;
